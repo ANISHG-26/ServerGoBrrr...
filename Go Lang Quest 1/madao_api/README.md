@@ -1,6 +1,6 @@
 # Madao API — SRE Chaos Playground
 
-![Madao spiral](https://wallpapercave.com/wp/wp8751083.png)
+![Madao spiral](../../assets/madao-spiral.png)
 
 Tiny HTTP service to practice SRE basics: golden signals, chaos drills, and graceful shutdown.
 
