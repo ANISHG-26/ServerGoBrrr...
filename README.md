@@ -2,8 +2,8 @@
 
 This repo is my Go practice log: start with tiny CLIs, then level up into SRE chaos drills. Think of it like shipping to `us-east-1` on a Friday: small changes, fast feedback, and the occasional chaos button.
 
-![AWS status whisper](assets/aws-meme.png)
-_Just a quiet status page check—definitely not refreshing us-east-1 every five minutes._
+![AWS status whisper](assets/aws-meme.jpg)
+*Status check vibes, nothing to see here.*
 
 ## Quest map
 
@@ -17,7 +17,7 @@ _Just a quiet status page check—definitely not refreshing us-east-1 every five
 - Level 0 hello world: `cd "Go Lang Quest 0/Chapter1" && go run .`
 - Flag drill: `cd "Go Lang Quest 0/Chapter2" && go run . -level 3`
 - Calm Madao API: `cd "Go Lang Quest 1/madao_api" && go run . -name "Madao API" -port 8080`
-- AWS chaos drill: `go run main.go -chaos -fail-pct 20 -slow-pct 30 -max-delay-ms 1200 -slow-threshold-ms 800 -persistent=true`; treat it like simulating an AZ brownout before it turns into a full us-east-1 adventure. `/health` returns `ok`, `degraded`, or `madao_spiral` with request ids for tracing.
+- AWS chaos drill: `go run main.go -chaos -fail-pct 20 -slow-pct 30 -max-delay-ms 1200 -slow-threshold-ms 800 -persistent=true`; good for rehearsing partial-AZ or dependency brownouts. `/health` returns `ok`, `degraded`, or `madao_spiral` with request ids for tracing.
 
 ## What I'm practicing
 
