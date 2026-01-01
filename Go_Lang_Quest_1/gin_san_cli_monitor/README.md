@@ -1,6 +1,6 @@
 # Gin-san CLI Monitor — Madao watcher
 
-![Gin-san monitor](../../assets/gin-san-monitor.jpg)
+![Gin-san monitor](../../assets/gin-san-monitor.png)
 
 Terminal dashboard that pings one or more health endpoints (built for the Madao API) and rolls up latency/error stats with a grumpy Gin-san commentary.
 
