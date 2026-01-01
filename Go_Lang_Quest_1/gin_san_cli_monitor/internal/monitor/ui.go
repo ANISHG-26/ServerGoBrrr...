@@ -6,41 +6,41 @@ import (
 	"time"
 )
 
-// ginsanCommentary maps statuses to messages.
+// ginsanCommentary maps statuses to fun commentary.
 func ginsanCommentary(status string) string {
 	switch status {
 	case "ok":
 		return "You still breathing?"
 	case "degraded":
-		return "You look like crap, but youƒ?Tll live."
+		return "You look like crap, but you'll live."
 	case "madao_spiral":
-		return "Alright, thatƒ?Ts enough."
+		return "Alright, that's enough."
 	case "net_err":
-		return "I canƒ?Tt even reach you."
+		return "I can't even reach you."
 	case "parse_err":
-		return "Youƒ?Tre talking nonsense."
+		return "You're talking nonsense."
 	default:
-		return "ƒ?ÝIƒ?Tm watching."
+		return "...I'm watching."
 	}
 }
 
 func stateVisual(status string, httpCode int) (label string, color string, icon string) {
 	switch status {
 	case "ok":
-		return "ok", ANSIGreen, "dYY› "
+		return "ok", ANSIGreen, "🟢 "
 	case "degraded":
-		return "degraded", ANSIYellow, "dYY­ "
+		return "degraded", ANSIYellow, "🟡 "
 	case "madao_spiral":
-		return "spiral", ANSIRed, "dYO? "
+		return "spiral", ANSIRed, "🌀 "
 	case "net_err":
-		return "net_err", ANSIRed, "ƒ?O "
+		return "net_err", ANSIRed, "❌ "
 	case "parse_err":
-		return "parse_err", ANSIYellow, "ƒsÿ‹,? "
+		return "parse_err", ANSIYellow, "⚠️ "
 	default:
 		if httpCode == 0 && status == "" {
-			return "init", ANSIDim, "ƒ?Ý  "
+			return "init", ANSIDim, "...  "
 		}
-		return "unknown", ANSIGray, "ƒs¦ "
+		return "unknown", ANSIGray, "⚪ "
 	}
 }
 
@@ -157,6 +157,6 @@ func RenderDashboard(tick int, started time.Time, urls []string, overall *Stats,
 		}
 	}
 
-	fmt.Printf("\n%sHint:%s If you see lots of %sdYO?madao_spiral%s, try raising --timeout or reducing the service --fail-pct.\n",
+	fmt.Printf("\n%sHint:%s If you see lots of %s🌀 madao_spiral%s, try raising --timeout or reducing the service --fail-pct.\n",
 		ANSIBold, ANSIReset, ANSIRed, ANSIReset)
 }

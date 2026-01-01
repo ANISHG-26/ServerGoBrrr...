@@ -42,7 +42,7 @@ func main() {
 
 	started := time.Now()
 
-	fmt.Printf("%s%sgin-san%s  dY>ų‹,?  keeping an eye on Madao%s\n", monitor.ANSIBold, monitor.ANSICyan, monitor.ANSIReset, monitor.ANSIReset)
+	fmt.Printf("%s%sgin-san%s  🛰️  keeping an eye on Madao%s\n", monitor.ANSIBold, monitor.ANSICyan, monitor.ANSIReset, monitor.ANSIReset)
 	fmt.Printf("%sTargets:%s %s\n", monitor.ANSIBold, monitor.ANSIReset, join(urls, ", "))
 	fmt.Printf("%sInterval:%s %s  %sTimeout:%s %s  %sConcurrency:%s %d  %sIterations:%s %d\n\n",
 		monitor.ANSIBold, monitor.ANSIReset, interval,
